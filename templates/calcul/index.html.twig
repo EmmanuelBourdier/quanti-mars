@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Calculateur{% endblock %}
+
+{% block body %}
+<main class="pcalc">
+    <h1 class="pcalc-title">le Calculateur</h1>
+        <p class="pcalc-intro">Notre calculateur s'adresse aussi bien aux <strong>particuliers</strong> qu’aux <strong>professionnels</strong>. C'est un outil, simple, fiable, rapide
+         et efficace qui vous fournis la liste précise et complète des matériaux nécessaires à vous procurer
+         pour réaliser vos travaux en plaque de plâtre.</p>
+    <section "pcalc-interet">
+        <div class="pcalc-pres">
+        <h4>Avantages du calculateur:</h4>
+            <ul>
+                <li>Gain de temps pour établir votre quantitatif complet des matériaux et accessoires nécessaire à votre réalisation. (*) <br></li>
+                <li>Professionnel avec votre quantitatif préalablement établi vous gagnerez en réactivité pour l’établissement de vos devis.</li>
+                <li>Stoker vos calculs par pièces, chantiers, ou client sur votre espace privatif si besoin :<br>Ex Plafond chambre  1, cloison (72/48) du salon, plafond salle de bain étage. Cloison 98 dans garage  etc. </li>
+                <li>Vous pourriez faire des comparatifs de prix:<br> En effet, faire 50m² de doublage sur montant ou sur fourrure, donne un  résultat final apparent identique mais le cout financier risque d’être diffèrent. En faisant  deux calculs de doublage diffèrent,  vous aurez deux listes à faire chiffrer.</li>
+                <li>Vous l’aurez compris, avec notre calculateur  fini les calculs fastidieux interminables au risque d’oublier,
+                 les  éclisses par exemple pour votre plafond ou la quantité de  mortier adhésif nécessaire au rebouchage avant de faire les joints).</li>
+                <li>Impression du quantitatif sous forme PDF et stockage possible dans votre espace privatif.</li>
+            </ul>
+        </div>
+    </section>
+    <section "pcalc-possible">
+        <div class="pcalc-prop">
+            <h4>Calculs proposés:</h4>
+            <p>Les calculs de quantitatif réalisables aujourd’hui par notre calculateur sont les suivants :
+            </P>
+            <div>Plafonds sur fourrures. </div>
+            <div>Plafonds sur montants. </div>
+            <div>Plafonds sur ossature primaire.</div>
+            <div>Doublages sur fourrures. </div>
+            <div>Doublages sur montants.</div>
+            <div>Doublage simple plaque.</div>
+            <div>Doublage complexe isolants.</div>
+            <div>Cloison distributive et séparative.</div>
+            <div>Cloison alveolaire(**).</div>
+            <div>Cloison carreaux de plâtre.</div>
+            <P><strong>Remarque</strong><br> Quel que soit le calcul de quantitatif que vous souhaitez réaliser
+             par l’intermédiaire de notre calculateur, vous obtiendrez toujpours un résultat à votre calcul,
+              sous forme d’une liste de matériaux à vous procurez. Cette liste exhaustive et complète vous permettra 
+              de réaliser la structure que vous souhaitez faire parmi les calculs proposés.
+              <strong>Notre calculateur établira cette liste en fonction des réponses que vous lui aurez fournies.</strong>
+               EN AUCUN CAS IL VOUS INDIQUERA SI VOUS ETE OU NON DANS LES NORMES DE REALISATION DE VOTRE STRUCTURE. Notre page d'<a class="plaf-link" href="#">Information technique</a>
+                vous guidera quant aux hauteurs à respecter en fonction des entraxes et des montants ou fourrures utiliser.<br>
+                <p>Pour les zones ou pièces exposées à l'humidité, il est recommandé d'utiliser des plaques hydrofuges,
+                une solution déjà intégrée dans les paramètres de notre calculateur.
+            </p>
+            </P>
+        </div>
+    </section>
+    <section "pcalc-fonct">
+        <div class="pcalc-fonct">
+        <h4>Fonctionnement:</h4>
+        <p>Pour que notre calculateur vous fournisse le quantitatif nécessaire à la réalisation de votre ouvrage il doit connaitre certain paramètre.
+         Vous devrez donc : </p>
+            <ul>
+                <li>Choisir un calcul parmi la liste proposé.</li>
+                <li>Répondre aux questions de notre calculateur, concernant l’ouvrage que vous souhaitez faire.<br>
+                Les dimensions (largeur hauteurs), des linéaires de cloisons si vous voulez ou non un isolant,
+                 un couvre joint (pour les plafonds coupe feux) mais aussi surface de cloison hydrofuge en cas de salle de bain
+                  par exemple. Une cloison dissymétrique,
+                 jusqu’à 3 plaques par face, le nombre de plaque sur cloison ou plafond (1 à 3), etc.…
+                </li>
+                <li>Puis validez pour obtenir instantanément le quantitatif à vous procurer.</li>
+            </ul>
+        </div>
+    </section>
+    <section "pcalc-exe">
+        <div class="pcalc-pres">
+            <h4>Résultat obtenus:</h4>
+            <ul>
+                <li>Le résultat est obtenu instantanément, suite à la validation de vos réponses.</li>
+                <li>Les calculs obtenus sont réalisé de manière professionnelle avec une marge 5% comme il est d’usage de le pratiquer.</li>
+            <ul>
+        </p>
+        </div>
+        <div>
+            <h3>Exemples</h3>
+            <p> Exemples : Pour un plafond de 70m² voilà ce qu’il nous faut. Visualisation d’exemples de calcul.
+                Deux exemples pour une même surface de doublage (un en montant, l’autre en fourrures). 
+                Deux  exemples pour un plafond un avec des suspentes l’autre avec des tiges filetés.
+        </p>
+        </div>
+    </section>
+    <section "pcalc-conce">
+        <div>
+            <h4>Conception et réalisation </h4>
+            <p>Le calculateur a été réalisé à l’aide de mes collaborateurs D Farkas, M Clément De-Givry.
+              Pour ma part, l’idée de concevoir un calculateur à germer suite à l’obtention du diplôme de plaquiste en 2000 et à une expérience de plus de 15ans
+             sur les chantiers allant de maison individuelle aux grosses structures (crèche, lycée ou hépad.) </p>
+        </div>
+    </section>
+</main>
+{% endblock %}

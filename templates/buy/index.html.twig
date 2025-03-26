@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prix{% endblock %}
+
+{% block body %}
+<div class="tarif">
+    <section class="tarif-intro py-3 bg-light">
+            <h1 class="heading-2 text-center mt-2{#tarif-title#}">Tarifs et modalités</h1>
+            <p class="heading-text mb-5">{#} Nous vous proposons trois manière de venir découvrir notre calculateur, la première « <strong>Un essai gratuit</strong>« vous familiarisera avec lui,
+              quant aux <strong>Packs</strong> ou à L’<strong>Abonnement</strong>, ils vous engagent pour une durée limitée que vous aurez préalablement choisie et à laquelle
+              vous devrez adhérer et souscrire.</p> 
+            <p>Pour les packs ou abonnement notre calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+            en fonction des réponses que vous avez données avant de valider le calcul à réaliser.
+            #}Nous vous proposons trois options pour découvrir notre calculateur :
+            <ul>            
+                <li>Une<strong> Découverte </strong>gratuite, qui vous permet de vous familiariser avec l'interface du calculateur.</li>
+                <li>Les<strong> Packs</strong> et <strong>Abonnements</strong>, qui vous offrent un accès complet au service pour une durée déterminée, selon l’option choisie.
+            </ul>
+                <p>
+                Avec un <strong>Pack</strong> ou un <strong>Abonnement</strong>, notre calculateur génère une liste complète des matériaux nécessaires à la réalisation de votre structure,
+                en fonction des informations que vous aurez fournies avant de valider votre calcul.
+                </p>
+            </p>
+    </section>
+    <section class="tarif-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 mb-4 ">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>Parcourez l'outil et enlever version gratuite ou mettre gratuitement</p>
+                            <img class="img-buy" src="build/images/test.png" alt="test" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title"><em>Découverte </em>{#des formulaires#} {#Essai Gratuit#}</h2>
+                            <p class="card-text">{#L’<strong>essai gratuit </strong>vous permettra de vous familiariser avec
+                             les formulaires de notre calculateur et toutes ses questions impératives et nécessaires.
+                                Le résultat final délivré, sera partiellement flouté {#car il ne s'agit que d'un entrainement#}
+                                Cette option <strong>Découverte</strong> vous permet de parcourir les formulaires de notre calculateur et de prendre connaissance
+                                 des questions auxquelles vous devrez répondre.
+                                 Le résultat final sera partiellement flouté.</p>
+                        </div>
+                        <div class="card-footer">    
+                            <a href="{{ path('app_calcul') }}" class="btn btn-primary">Parcourez  l'outil{#Essayer#}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>Choisissez un pack ou Optez pour un Pack</p>
+                            <img class="img-buy" src="build/images/pack.png" alt="pack" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title"><em>Pack</em></h2>
+                            <p class="card-text">La formule <strong>Packs</strong>vous permet d'acheter un nombre de calculs adapté à vos besoins.
+                             Les options disponibles sont : 
+                              <strong>1</strong>, <strong>3</strong> ou <strong>10</strong>  calculs.
+                                {#Il ne sera pas possible de souscrire  à plusieurs packs simultanément.#}
+                            </p>
+                        </div>
+                        <div class="card-footer">    
+                            <a href="{{ path('app_pack_buy') }}" class="btn btn-primary">{#Acheter#}Choisissez</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <p>titre: Abonnement et sous l'image Aux besoins</p>
+                            <img class="img-buy" src="build/images/abonne.png" alt="abonnement" />
+                        </div>
+                        <div class="card-body">
+                            <h2 class="card-title"><em>Abonnement</em></h2>
+                            <p class="card-text">La formule  <strong>Abonnement</strong> vous engage pour une durée définie,  d'<strong>une semaine</strong>, d'<strong>un mois</strong> ou de <strong>6 mois</strong>
+                                pour utiliser notre calculateur d'une maniére illimitée durant la période souscrite.</p>
+                        </div>
+                        <div class="card-footer">    
+                            <a href="{{ path('app_abonnement_buy') }}" class="btn btn-primary">Souscrire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

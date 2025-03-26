@@ -1,0 +1,39 @@
+<section class="prix-container d-flex flex-column w-100 py-3 text-center">
+    <h1 class="heading-2 py-2">Nos tarifs</h1>
+    <div class="row flex-wrap w-100 d-flex justify-content-evenly px-5">
+       <div class="prix-cube essai d-flex flex-column ">
+                <h3 class="py-2">{#ajout#}Découverte{# fin ajout#}{#avant: Un essai gratuit#}</h3>
+                <p class="prix-text-ess">Testez {#ajout#}l'interface de {# fin ajout#}notre calculateur pour vous familiariser avec ses formulaires.</p>
+                <a href="{{ path('app_calcul') }}" >
+                <button class="btn btn-primary mx-auto btn-lg my-4">Testez</button>
+                </a>    
+        </div>
+        <div class="prix-cube pack d-flex flex-column ">
+                <div class="prix-header">
+                    <h3 class="py-2" >Packs </h3>
+                    <p class="prix-text">Solutions idéales pour vos calculs
+                    {#Payez en une fois pour 1 à 10 calculs.#}</p>
+                </div>
+                <a href="{{ path('app_buy') }}" class="prix-link" >
+                <div class="prix-liste">
+                    <div class="items-prix"><p>A l'unité <br><span class="prix">{{packs[0].price}} €</span></p></div>
+                    <div class="items-prix"><p>Pack de 3 <br><span class="prix">{{packs[1].price}} €</span></p></div>
+                    <div class="items-prix"><p>Pack de 10<br><span class="prix">{{packs[2].price}} € </span></p></div>
+                </div>
+                </a>
+        </div>
+        <div class="prix-cube abon d-flex flex-column ">
+                <div class="prix-header">
+                    <h3 class="py-2" >Abonnements</h3>
+                    <p class="prix-text">Selon vos besoins.</p>
+                </div>
+                <a href="{{ path('app_buy') }}" class="prix-link" >
+                <div class="prix-liste">
+                    <div class="items-prix"><p>1 semaine<br><span class="prix">{{abonnements[0].price}} €</span></p></div>
+                    <div class="items-prix"><p> 1 mois <br><span class="prix">{{abonnements[1].price}} €</span></p></div>
+                    <div class="items-prix"><p>6 mois <br><span class="prix">{{abonnements[2].price}} €</span></p></div>
+                </div>
+                </a>
+        </div>
+    </div>
+</section>

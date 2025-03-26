@@ -1,0 +1,21 @@
+<section class=" bg-green" id="comments">
+      <h1 class="heading-2">Avis de nos clients</h1>
+    {% for commentaire in commentaires %}
+      {% if commentaire %}
+      <div class="comments">
+        <a href="{{ path('app_commentaire_liste') }}">
+        <div class="d-flex w-100 justify-content-between">
+          <h6 class="mb-1">{{ commentaire.nom }} {{ commentaire.prenom }}</h6>     
+          <p class="text-muted">{{ commentaire.createAt|date('d-m-Y') }}</p>
+        </div>
+        <div class="comment-body">
+          <p class="mb-1  text-truncate-2 text-start mt-2" >{{ commentaire.message }}</p>
+        </div>
+        </a>
+      </div>
+      {% else %}
+        <p>Pas de commentaire récent disponible.</p>
+      {% endif %}
+    {% endfor %}
+  </div>  
+  </section>

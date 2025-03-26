@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Doublages{% endblock %}
+
+{% block body %}
+<main class="doub">
+        <h1 class="heading-2 text-center mt-2"> Les Doublages</h1><br>
+        <p class="heading-text mb-5" >Le doublage consiste en l’ajout de cloisons ou de contre-cloisons, qu'elles soient isolées ou non,
+         sur un mur brut. Ce procédé permet d’améliorer l’aspect de la surface murale en la rendant propre et lisse, prête à être peinte ou revêtue
+          d'un autre type de finition.<br>Il en existe deux types: <strong>le doublage collé </strong>et sur <strong>ossature métallique</strong>.</p>
+    <div class="bg-gris mb-4">
+        <div class="container-fluid">    
+            <h4 class="mb-4 mt-3 py-3"><em>Avantages du doublage</em></h4>
+            <ul>
+                <li><strong>Isolation thermique et acoustique</strong> : En fonction des matériaux choisis, le doublage peut offrir une meilleure isolation.</li>
+                <li><strong>Finition lisse et esthétique</strong> : Le doublage permet de masquer les irrégularités et les imperfections d'un mur brut, obtenant une surface uniforme.</li>
+                <li><strong>Préparation pour la peinture ou les revêtements</strong> : Le mur doublé est prêt à recevoir une couche de peinture ou d'autres types de revêtements muraux ( faïence,enduit décoratif papier peint, etc.).</li>
+            </ul>
+            <p>Le choix du type de doublage dépendra des besoins spécifiques en isolation et de l’état du mur d’origine.</p>
+        </div>
+    </div>
+    <div class="bg-gris">
+        <div class="container">
+            <h2 class="structure-subtitle mt-4 py-4"><em>Doublage Collé</em></h2>
+            <p class="heading-text">Ce type de doublage consiste à coller directement des  plaques de plâtre ou de complexe isolant (plaque plus isolant solidarisés) sur le mur 
+            avec un mortier adhésif. C'est une solution rapide qui assure une bonne isolation thermique et acoustique selon les matériaux choisis.</li></p>
+            <div class="row mt-5 justify-content-evenly">
+                <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">   
+                    <div class="card-header">
+                        <img class="img-fluid" src="build/images/rampant.jpg" alt="plafond rampant comble" />
+                    </div>
+                    <div class="text-center mt-2">
+                            <p>Doublage sur mur par simple plaque.<BR>  PHOTO COLLAGE SIMPLE PLAQUE A TROUVER.  </p>
+                    </div>
+                </div>
+                <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">
+                    <div class="card-header">        
+                        <img class="img-fluid" src="build/images/DoublageComplexe.jpg" alt="doublage complexe calibel" />
+                    </div>    
+                    <div class="text-center mt-2">
+                        <p>Doublage par complexe type"calibel".</P>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </div>
+    <div class="bg-gris mt-4">
+        <div class="container">
+            <h2 class="structure-subtitle mt-4 py-4"><em>Doublage sur Ossature</em></h2>
+            <p class="heading-text">Dans ce cas, une ossature métallique (ou en bois mais non considérer ici dans nos calcul de doublage) est installée à quelques centimètres du mur. Des plaques de plâtre y sont alors fixer. L'espace entre le mur et la cloison permet d'ajouter un isolant pour améliorer les performances énergétiques et acoustiques de la pièce. Il facilite aussi le passage des gaines électriques et des tuyauteries. </li>
+            </p>
+            <div class="bg-white mx-4 my-4 p-4">
+                <h4 class="mb-4 mt-3"><em>Types d'ossature possible</em></h4>
+                <ul>
+                    <li><strong>Ossature sur fourrures</strong><br>
+                    Idéale pour les doublages nécessitant un faible encombrement
+                    ou pour des murs qui doivent être recouverts sans créer de structure porteuse.<br>Elle permet de réaliser des travaux avec un minimum de perte d'espace.</li><br> 
+                    <li><strong>Ossature sur montants</strong><br>
+                    Ce type de structure est couramment utilisé pour réaliser des doublages nécessitant une bonne résistance et stabilité.<br>
+                    Elle est plus encombrante que l’ossature précédente mais plus rigide et peut supporter
+                    des charges (comme des étagères ou des équipements fixés aux murs, il faudra alors prévoir des renforts lors de la mise en œuvre).<br>
+                    Voir le tableau indiquant la hauteur des appuis intermédiaires a respecté. Voir notre page <a class="plaf-link" href="#">Information technique</a>.</li>
+                </ul>
+            </div>
+            <div class="row mt-5 justify-content-evenly">
+                <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">
+                    <div class="card-header">
+                        <img class="doub-oss-card-img" src="build/images/DoublageFourrures.jpg" alt="doublage fourrures" />
+                    </div>
+                    <div class="text-center mt-2">
+                        <p >Doublage sur fourrures. </p>
+                    </div>
+                </div>
+                <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">
+                    <div class="card-header">
+                        <img class="doub-oss-card-img" src="build/images/DoublageMontant.jpg" alt="doublage montant M48/35" />
+                    </div>
+                    <div class="text-center mt-2">
+                        <p>Doublage sur montants.</P>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</main>
+{% endblock %}

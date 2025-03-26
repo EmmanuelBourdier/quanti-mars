@@ -1,0 +1,149 @@
+@media (max-width: 1439px) {
+  body {
+    width: 100%;
+    background-color: white !important;
+  }
+
+  .navbar.navbar-expand.navbar-first {
+    height: 150px;
+  }
+
+  .navbar-expand-lg .navbar-collapse {
+    padding-left: 0px;
+    margin: 0px auto;
+  }
+
+  .nav-item {
+    padding: 0 20px !important;
+    margin: 0 30px !important;
+  }
+
+  .header-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .logo-mobile,
+  .paraph-mobile {
+    margin-bottom: 5px;
+  }
+
+  .paraph-mobile {
+    color: white;
+  }
+
+  .dropdown-menu.show {
+    left: -90px !important;
+  }
+  .dropdown-toggle {
+    left: 30px !important;
+  }
+
+  ul.navbar-nav {
+    margin-right: 10px !important;
+  }
+
+  .section-intro {
+    margin-top: 0 !important;
+    padding: 15px;
+  }
+
+  section.gray-blue {
+    background-color: white !important;
+  }
+
+  .section-intro {
+    width: 100%;
+  }
+
+  #intro-2 {
+    padding: 15px !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .img-intro {
+    width: 370px;
+    height: auto;
+  }
+
+  p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+
+  .img-calc {
+    width: 100%;
+  }
+
+  .calc-cube {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .calc-text {
+    margin-bottom: 30px;
+  }
+
+  .prix-container,
+  #prix {
+    justify-content: center;
+  }
+
+  #comments {
+    flex-wrap: wrap;
+  }
+
+  .news,
+  .comments {
+    width: 40%;
+    margin-bottom: 20px !important;
+  }
+
+  #news,
+  #comments {
+    padding: 20px 0 !important;
+  }
+
+  .news h5,
+  .comments h5 {
+    font-size: 20px !important;
+  }
+
+  .commentaire {
+    min-height: min-content;
+    height: auto;
+    padding-bottom: 40px;
+  }
+  .comment {
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 1282px) {
+  .nav-item {
+    padding: 0 10px !important;
+    margin: 0 10px !important;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    padding-left: 0px;
+    margin: 0px auto;
+  }
+
+  .heading-1 {
+    font-size: 50px;
+  }
+
+  .sub-heading-1 {
+    font-size: 30px;
+  }
+}

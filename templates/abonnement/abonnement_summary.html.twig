@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="tarif">
+    <section class="tarif-intro"> 
+        <h1 class="tarif-title">Résumé de l'abonnement choisi</h1>
+        </div>
+    </section>
+    <section class="tarif-section">  
+        <div class="container mx-auto">
+            <div class="tarif-left">
+                <h2 class="tarif-section-title">{{ abonnement.name }}</h2>
+                <h4>Prix: {{ abonnement.price }} €</h4>
+                <p>L'abonnement  {{ abonnement.name }} vous permet d'utiliser le calculateur pendant une durée de {{ abonnement.duration }} jours.</p> 
+                <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+                à l'écran et sous un format PDF téléchargeable.
+                </p>
+                <p>Vous pouvez accéder à vos calculs précedents dans la rubrique Profil->Mes calculs
+                </p>
+            </div>
+            <div class="tarif-right">
+            <div class="prix-cube pack d-flex flex-column text-center py-5">
+                    <form action="{{ path('app_account_paymentAbo', {'abonnementId': abonnement.id}) }}" method="POST">
+                    <button type="submit">Checkout avec Stripe</button>
+                    </form>
+            </div>
+            </div>
+        </div>
+    </section>
+</main>
+    
+{% endblock %}
+    

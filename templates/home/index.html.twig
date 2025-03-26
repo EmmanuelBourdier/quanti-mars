@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block body %}
+{{ include("components/section-intro.html.twig")}}
+{{ include("components/section-structures.html.twig")}}
+{{ include("components/section-calc.html.twig")}}
+{{ render(controller('App\\Controller\\SectionPrixController::index')) }}
+{{ render(controller('App\\Controller\\SectionNewController::currentNew')) }}
+{{ render(controller('App\\Controller\\SectionCommentaireController::index')) }}
+{% endblock %}

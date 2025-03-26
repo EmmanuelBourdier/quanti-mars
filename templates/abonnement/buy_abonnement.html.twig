@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<main class="tarif">
+    <section class="tarif-intro"> 
+        <h1 class="tarif-title">S'abonner</h1>
+        </div>
+    </section>
+    <section class="tarif-section">  
+            <div class="container mx-auto">
+                <div class="tarif-left">
+                <h2 class="tarif-section-title">Modalités</h2>
+                <p><strong> L'abonnement</strong>  vous permet d'utiliser le calculateur pendant la durée choisie.</p> 
+            <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+            à l'écran et sous un format PDF téléchargeable.
+            </p>
+            <ul>
+            <li>Pour les formules <strong>Abonnements</strong> vous pourrez conserver vos calculs dans votre espace privatif,
+                    par Client, Chantier, Structure, Date. mais également le sortir en pdf si besoin.<br> 
+                    <em>Cela peut être utiles si des paramètres (tel que, une hauteur, une largeur, etc.) 
+                    changent avant la réalisation de vos travaux.</em></li>
+                    <li>Si vous avez plusieurs calculs à faire, l’abonnement s’avère plus économique.</li>
+            </ul>
+                </div>
+                <div class="tarif-right">
+                    <div class="prix-cube pack d-flex flex-column text-center">
+        <div class="prix-header">
+            <h3 class="prix-text-bold">Abonnement</h3>
+            <p class="prix-text">Payez un abonnement</p>
+        </div>
+        {{ form_start(form) }}
+        <div class="prix-liste">
+            <div class="items-prix">
+                
+                <p>une semaine <br><span class="prix">{{abonnements[0].price}} €</span></p>
+                {{ form_widget(form.abonnement.0) }}
+            </div>
+            <div class="items-prix">
+               
+                <p>1 mois <br><span class="prix">{{abonnements[1].price}} €</span></p>
+                 {{ form_widget(form.abonnement.1) }}
+            </div>
+            <div class="items-prix">
+                
+                <p>6 mois <br><span class="prix">{{abonnements[2].price}} €</span></p>
+                {{ form_widget(form.abonnement.2) }}
+            </div>
+            </div>
+        <button class="btn btn-success my-2" type="submit">Acheter</button>
+        {{ form_end(form) }}
+    </div>
+                </div>
+            </div>
+        </section>
+</main>
+    
+{% endblock %}
+    

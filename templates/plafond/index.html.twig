@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plafonds{% endblock %}
+
+{% block body %}
+<main class="plaf">
+ <h1 class="heading-2 text-center mt-2">Les Plafonds</h1>
+  <p class="heading-text mb-5">En fonction des dimensions de la pièce et du type de support (charpente en bois, dalle béton ou autre..) plusieurs types de ferraillage sont possible.<br>
+   Il existe trois principaux types de ferraillage pour soutenir un plafond en plaques de plâtre: les fourrures, les montants ou une ossature primaire. 
+  </p>
+    <div class="bg-gris">
+        <div class="container-fluid mb-1">
+            <div class="row justify-content-between">
+                <div class="col-xl-5 col-md-6 col-sm-12 d-flex justify-content-start align-items-start flex-column ms-5" id="plaf-four-1">
+                    <h2 class=" structure-subtitle mt-5 "><em>Plafond sur Fourrures</em></h2>
+                    <p class="heading-text">Il est couramment utilisé avec les charpentes de type fermette,<br> très répandues dans les constructions individuelles.<br> Pour un ferraillage optimal,
+                il est conseillé de privilégier un entraxe de 50 cm plutôt que 60 cm. Cette configuration permet de réduire le risque de déformation des plaques au fil du temps,
+                selon l’expérience pratique.</p>
+                </div>
+                <div class="card col-xl-5 col-md-6 col-sm-12 d-flex justify-content-center mb-5 py-4 me-5"id="plaf-four-2">
+                    <div class="card-header">
+                        <img class="img-fluid" src="build/images/LogPlaf3.jpg" alt="plafond sur f530" />
+                    </div>
+                    <div class="text-center mt-2">
+                        <p >Plafond sur fourrures F-530</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="heading-text">L’ossature sur fourrures type "f 530" est également appropriée au ferraillage des plafonds rampants ou encore des plafonds cintrés, permettant une finition disign et original.</p> 
+                <div class="row mt-5 justify-content-evenly">
+                    <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">
+                        <div class="card-header">
+                            <img class="img-fluid" src="build/images/rampant.jpg" alt="plafond rampant comble" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <p >Rampant sur f 530 dans des combles amenageable.</p>
+                        </div>
+                    </div>
+                    <div class="card col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mb-5 py-4">
+                        <div class="card-header">
+                            <img class="img-fluid" src="build/images/plafond cintre.jpg" alt="plafond cintre sur f530" />
+                        </div>
+                        <div class="text-center mt-2">
+                            <p>Plafond cintré realiser sur ossature f 530.</P>
+                        </div>
+                    </div>
+                </div>    
+        </div>
+    </div>
+    <div class="container-fluid bg-gris mt-5">
+       <div class="row justify-content-between">
+            <div class="col-xl-5 col-md-7 col-sm-12 d-flex justify-content-start align-items-start flex-column ms-5" id="plaf-mont-1">
+                <h2 class="structure-subtitle mt-5"><em> Plafond sur Montants</em></h2>
+                <p class="heading-text">On parle également de plafond « autoportant », un type de plafond particulièrement adapté pour les espaces d'une largeur inférieure à 4 mètres.
+                    Ce type de structure est idéal pour des projets de rénovation dans des pièces telles qu'une chambre, une salle de bain, ou un couloir.<br>
+                    L'ossature à montants de type "M 48/35" convient généralement aux plafonds de petite largeur.<br> Pour des plafonds autoportants jusqu'à une largeur maximale de 4,25 mètres,
+                     il est recommandé d'utiliser des montants "M 100/50" avec un entraxe de 50 cm.
+                    Pour plus d'informations sur les portées et les ossatures adaptées,
+                    consultez notre page <a class="link" href="#">Information technique</a>.</p><br>
+            </div>
+            <div class="col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mt-5 me-5 align-items-center" id="plaf-mont-2">
+                <div class="card card-reduced mt-4">
+                    <div class="card-header">
+                        <img class="img-fluid" src="build/images/plafond autoportant sur montant double.jpg" alt="plafond sur m48/35" />
+                    </div>
+                    <div class="text-center mt-2">
+                        <p >Plafond sur montants doubles m48/35.</p>
+                    </div> 
+                </div>    
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-gris mt-5 mb-4">
+        <div class="row justify-content-between">
+            <div class="col-xl-5 col-md-7 col-sm-12 d-flex justify-content-start align-items-start flex-column ms-5"id="plaf-oss-1">
+                <h2 class="structure-subtitle mt-5"><em>Plafond sur Ossature primaire.</em></h2>
+                <p class="heading-text">Il est idéal pour les grandes hauteurs et les accroches complexes, est souvent utilisé sur de grandes surfaces. Fixé à la structure du bâtiment, il offre solidité et flexibilité pour le passage des réseaux (électricité, ventilation, etc.),
+                 ce qui le rend prisé chez les professionnels.</p>
+            </div>
+            <div class="col-xl-5 col-md-5 col-sm-12 d-flex justify-content-center mt-5 me-5 align-items-center"id="plaf-oss-2">
+                <div class="card card-reduced mt-4">
+                    <div class="card-header">
+                        <img class="img-fluid" src="build/images/plaf primaire.jpg" alt="plafond sur primaire" />
+                    </div>
+                    <div class="text-center mt-2">
+                        <p >Plafond sur Ossature primaire.</p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>       
+</main>
+{% endblock %}

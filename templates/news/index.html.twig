@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités{% endblock %}
+
+{% block body %}
+<section class="list-comment">
+  <div class="text-center container py-2 bg-grey my-4">
+    <div class="justify-content-center display-5 mb-5">
+      <h1 class="heading-2">Nos Actualités</h1>
+    </div>
+    {% for new in news %}
+      <div class=" m-5 bg-light py-4 px-5 rounded-2">
+        <div class="d-flex w-100 justify-content-between flex-wrap mb-3">
+          <h5 class="mb-1">{{ new.title }}</h5>
+          <small class="text-muted mb-1">{{ new.createdAt|date('d-m-Y') }}</small>
+        </div>
+        <p class="mb-1 text-start ">{{ new.content }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
+{#avant 
+  <section>
+    <figure class="text-center container py-5 bg-grey mt-5">
+      <div class="justify-content-center display-5 mb-5"><h1 class="tarif-title">Avis de nos clients</h1></div>
+      {% for new in news %}
+        <div class="list-group my-5">
+    
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"> {{ new.title }}</h5>
+        <small class="text-muted">{{ new.createdAt|date('d-m-Y') }}</small>
+      </div>
+      <p class="mb-1">{{ new.content }}</p>
+  </div>
+      {% endfor %}
+      
+    </figure>
+    </section>
+    {% endblock %}
+#}

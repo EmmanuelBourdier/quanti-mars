@@ -1,0 +1,405 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Informations techniques{% endblock %}
+
+{% block body %}
+<main class="infotech">
+    <h1 class="heading-2 text-center mt-3">Informations techniques</h1><br>
+                <p class="heading-text mb-5" >Pour assurer la fiabilité de vos structures en plaques de plâtre,
+         voici quelques informations techniques conformes aux normes de ferraillage en vigueur. Classées par catégories,
+         ces données vous aideront à garantir la solidité et la durabilité de votre structure.</p><br>
+    <div class="bg-gris my-3 p-3" id="div-table">                    
+        <div class=" mb-4">
+                <h2 class="structure-subtitle px-4 py-4"><em>Plafond</em></h2>
+                <p class="heading-text mb-5">Le tableau ci-dessous vous donne la distance maximum à respecter  entre chaque suspente .Ceci est en fonction des plaques, de l’ossature et de l'entraxe choisi.
+            La première ligne correspond aux fourrures, les suivantes aux montants (simple " ] " ou double " ][ ").</p><br>     
+        
+            <div id="card-table" class="card col-xl-12 col-md-12 col-sm-12 d-flex justify-content-center mb-5 py-4 px-3">
+                <table class="tabplaf" >  
+                    <tbody>
+                    <tr class="tr-center">
+                        <td colspan="8" width="54%"> PORTEE MAXI DES OSSATURES (en mètre)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" width="60%"><strong> PLAFOND</strong></td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td colspan="2" width="18%"><strong> Plaque</strong></td>
+                        <td colspan="2" width="15%">1 BA 13</td>
+                        <td colspan="2" width="15%">1 BA 15</td>
+                        <td colspan="2" width="15%">1 BA18</td>
+                        <td colspan="2" width="15%">2 BA13</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td colspan="2" width="18%"><strong> entraxe (cm)</strong></td>
+                        <td width=" 10%">60</td>
+                        <td width=" 10%">50</td>
+                        <td width=" 10%">60</td>
+                        <td width=" 10%">50</td>
+                        <td width=" 10%">60</td>
+                        <td width=" 10%">50</td>
+                        <td width=" 10%">60</td>
+                        <td width=" 10%">50</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td colspan="2" width="99"><strong> Fourrure</strong></td>
+                        <td width=" 10%">1,20</td>
+                        <td width=" 10%">1,25</td>
+                        <td width=" 10%">1,15</td>
+                        <td width=" 10%">1,20</td>
+                        <td width=" 10%">1,15</td>
+                        <td width=" 10%">1,20</td>
+                        <td width=" 10%">1,10</td>
+                        <td width=" 10%">1,15</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M48-35</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">2,00</td>
+                        <td width=" 10%">2,20</td>
+                        <td width=" 10%">1,95</td>
+                        <td width=" 10%">2,15</td>
+                        <td width=" 10%">1,90</td>
+                        <td width=" 10%">2,10</td>
+                        <td width=" 10%">1,80</td>
+                        <td width=" 10%">2,00</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M48-35</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,60</td>
+                        <td width=" 10%">2,30</td>
+                        <td width=" 10%">2,55</td>
+                        <td width=" 10%">2,25</td>
+                        <td width=" 10%">2,45</td>
+                        <td width=" 10%">2,15</td>
+                        <td width=" 10%">2,35</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M48-50</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">2,15</td>
+                        <td width=" 10%">2,35</td>
+                        <td width=" 10%">2,05</td>
+                        <td width=" 10%">2,25</td>
+                        <td width=" 10%">2,00</td>
+                        <td width=" 10%">2,20</td>
+                        <td width=" 10%">1,95</td>
+                        <td width=" 10%">2,10</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M48-50</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">2,55</td>
+                        <td width=" 10%">2,80</td>
+                        <td width=" 10%">2,45</td>
+                        <td width=" 10%">2,71</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,65</td>
+                        <td width=" 10%">2,30</td>
+                        <td width=" 10%">2,50</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M70-35</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">2,50</td>
+                        <td width=" 10%">2,75</td>
+                        <td width=" 10%">2,45</td>
+                        <td width=" 10%">2,65</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,60</td>
+                        <td width=" 10%">2,25</td>
+                        <td width=" 10%">2,50</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M70-35</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">3,00</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">2,90</td>
+                        <td width=" 10%">3,20</td>
+                        <td width=" 10%">2,85</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">2,70</td>
+                        <td width=" 10%">2,95</td>                   
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M70-50</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">2,65</td>
+                        <td width=" 10%">2,90</td>
+                        <td width=" 10%">2,60</td>
+                        <td width=" 10%">2,85</td>
+                        <td width=" 10%">2,50</td>
+                        <td width=" 10%">2,75</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,65</td>                      
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M70-50</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">3,15</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">3,40</td>
+                        <td width=" 10%">3,00</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">2,85</td>
+                        <td width=" 10%">3,15</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M90-35</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">2,90</td>
+                        <td width=" 10%">3,20</td>
+                        <td width=" 10%">2,85</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">2,75</td>
+                        <td width=" 10%">3,00</td>
+                        <td width=" 10%">2,65</td>
+                        <td width=" 10%">2,90</td>                   
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M90-35</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">3,80</td>
+                        <td width=" 10%">3,35</td>
+                        <td width=" 10%">3,70</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">3,60</td>
+                        <td width=" 10%">3,15</td>
+                        <td width=" 10%">3,45</td>
+                    </rt>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M90-50</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">3,05</td>
+                        <td width=" 10%">3,35</td>
+                        <td width=" 10%">3,00</td>
+                        <td width=" 10%">3,25</td>
+                        <td width=" 10%">2,90</td>
+                        <td width=" 10%">3,20</td>
+                        <td width=" 10%">2,80</td>
+                        <td width=" 10%">3,05</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M90-50</strong></td>
+                        <td width="5%">] [</td>
+                        <td width=" 10%">3,65</td>
+                        <td width=" 10%">4,00</td>
+                        <td width=" 10%">3,55</td>
+                        <td width=" 10%">3,90</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">3,80</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">3,65</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M100-50</strong></td>
+                        <td width="5%">]</td>
+                        <td width=" 10%">3,25</td>
+                        <td width=" 10%">3,60</td>
+                        <td width=" 10%">3,15</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">3,40</td>
+                        <td width=" 10%">2,95</td>
+                        <td width=" 10%">3,25</td>
+                    </tr>
+                    <tr class="tr-center">
+                        <td width="15%"><strong> M100-50</strong></td>
+                        <td width="5%"> ] [</td>
+                        <td width=" 10%">3,90</td>
+                        <td width=" 10%">4,25</td>
+                        <td width=" 10%">3,75</td>
+                        <td width=" 10%">4,15</td>
+                        <td width=" 10%">3,70</td>
+                        <td width=" 10%">4,05</td>
+                        <td width=" 10%">3,50</td>
+                        <td width=" 10%">3,85</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> 
+    </div>
+    <div class="bg-gris my-3 p-3" id="div-table">                    
+        <div class=" mb-4">
+                <h2 class="structure-subtitle px-4 py-4"><em>Doublage</em></h2>
+                <p class="heading-text mb-5">Le tableau ci-dessous vous donne la distance maximum entre chaque appuis intermédiaires.
+                Ceci est en fonction des hauteurs, de l’ossature et du nombre de plaques choisies.
+                La première ligne correspond aux fourrures, les suivantes aux montants  (simple " ] " ou double " ][ ").</p>
+            <div id="card-table" class="card col-xl-12 col-md-12 col-sm-12 d-flex justify-content-center mb-5 py-4 px-3">       
+                <table class="tabplaf" >
+                    <tbody>
+                    <tr lass="tr-center">
+                        <td colspan="7" width="358">DISTANCE MAXI ENTRE LES APPUIS INTERMEDIAIRE ( en mètre)</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">DOUBLAGE</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width=" 10%">Entre axe de 60</td>
+                        <td width=" 10%">1 BA 13</td>
+                        <td width=" 10%">2 BA 13</td>
+                        <td width=" 10%">3 BA 13</td>
+                        <td width=" 10%">1 BA 18</td>
+                        <td width=" 10%">2 BA 18</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%"></td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%">1 BA 15</td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%"> </td>
+                        <td width=" 10%"> </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" width=" 10%">Fourrure</td>
+                        <td width=" 10%">1,20</td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%"></td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M48-35</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">2,00</td>
+                        <td width=" 10%">2,30</td>
+                        <td width=" 10%"></td>
+                        <td width=" 10%">2,35</td>
+                        <td width=" 10%"> 2,55</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M48-35</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,75</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">2,60</td>
+                        <td width=" 10%">2,85</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M48-50</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">2,15</td>
+                        <td width=" 10%">2,45</td>
+                        <td width=" 10%">2,80</td>
+                        <td width=" 10%">2,40</td>
+                        <td width=" 10%">2,60</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M48-50</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">2,55</td>
+                        <td width=" 10%">2,95</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">2,80</td>
+                        <td width=" 10%">3,05</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M70-35</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">2,55</td>
+                        <td width=" 10%">2,90</td>
+                        <td width=" 10%">3,25</td>
+                        <td width=" 10%">2,75</td>
+                        <td width=" 10%">3,00</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M70-35</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">3,00</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">3,85</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">3,60</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M70-50</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">2,70</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">3,45</td>
+                        <td width=" 10%">2,95</td>
+                        <td width=" 10%">3,20</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M70-50</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">3,20</td>
+                        <td width=" 10%">3,70</td>
+                        <td width=" 10%">4,10</td>
+                        <td width=" 10%">3,50</td>
+                        <td width=" 10%">3,85</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M90-35</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">2,95</td>
+                        <td width=" 10%">3,35</td>
+                        <td width=" 10%">3,75</td>
+                        <td width=" 10%">3,20</td>
+                        <td width=" 10%">3,50</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M90-35</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">3,50</td>
+                        <td width=" 10%">4,00</td>
+                        <td width=" 10%">4,45</td>
+                        <td width=" 10%">3,80</td>
+                        <td width=" 10%">4,15</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M90-50</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">3,10</td>
+                        <td width=" 10%">3,55</td>
+                        <td width=" 10%">4,00</td>
+                        <td width=" 10%">3,40</td>
+                        <td width=" 10%">3,70</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M90-50</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">3,70</td>
+                        <td width=" 10%">4,25</td>
+                        <td width=" 10%">4,75</td>
+                        <td width=" 10%">4,05</td>
+                        <td width=" 10%">4,55</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M100-50</td>
+                        <td width=" 10%"> [</td>
+                        <td width=" 10%">3,30</td>
+                        <td width=" 10%">3,80</td>
+                        <td width=" 10%">4,25</td>
+                        <td width=" 10%">3,60</td>
+                        <td width=" 10%">3,95</td>
+                    </tr>
+                    <tr>
+                        <td width=" 10%">M100-50</td>
+                        <td width=" 10%"> ][</td>
+                        <td width=" 10%">3,90</td>
+                        <td width=" 10%">4,50</td>
+                        <td width=" 10%">5,05</td>
+                        <td width=" 10%">4,30</td>
+                        <td width=" 10%">4,70</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+     <div class="bg-gris my-3 p-3" id="div-table">                    
+        <div class=" mb-4">
+                <h2 class="structure-subtitle px-4 py-4"><em>cloisons</em></h2>
+                <p class="heading-text mb-5">Les tableaux ci-dessous vous donne ....A FAIRE cloison distributives P9 memento 2009.</p><br>     
+        </div>
+    </div>           
+</main>
+{% endblock %}

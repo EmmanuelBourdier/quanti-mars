@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Use Pack</h1>
+    <form method="post" action="{{ path('app_pack_use') }}">
+        <select name="pack_id">
+            {% for userPack in user.userPacks %}
+                <option value="{{ userPack.pack.id }}">{{ userPack.pack.name }} ({{ userPack.credit }}/{{ userPack.pack.quantity }})</option>
+            {% endfor %}
+        </select>
+        <button class="btn">Use</button>
+    </form>
+{% endblock %}

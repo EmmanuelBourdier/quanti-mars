@@ -1,0 +1,26 @@
+<section class="bg-grey" id="news">
+    <div class=" d-flex align-items-center justify-content-center mb-1 ">
+    <h1 class="heading-2">Actualités</h1></div>
+    {% if new  %}
+      <div class="news">
+        <a href="{{ path('app_news') }}">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="">{{ new.title}} </h5>
+            <p class="text-muted">{{ new.createdAt|date('d-m-Y') }}</p>
+          </div>
+          <div class="container d-flex align-items-center py-4">
+              <p class="mb-1">{{ new.content }}</p>
+          </div>
+        </a>
+      </div>  
+        {#ajout bouton#}
+        <div class="justify-content-center mb-2 d-flex pe-5" id="btn-comment">
+          <button class="btn btn-lg btn-primary d-flex " type="button">
+          <a href="{{ path('app_news') }}">L'ensemble de nos informations</a></button>
+        </div>
+        {#fin ajout bouton#}
+      
+    {% else %}
+      <p>Pas d'actualité récente disponible.</p>
+    {% endif %}
+</section>
