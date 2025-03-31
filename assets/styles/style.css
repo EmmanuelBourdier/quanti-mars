@@ -17,6 +17,10 @@ body {
   /*avant #93a9bc;*/
 }
 
+.bg-green {
+  background-color: #789e54;
+}
+
 .gray-blue {
   background-color: rgba(211, 227, 253, 0.522);
 }
@@ -42,13 +46,11 @@ body {
 }
 
 main {
-  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
 }
 
 .content-wrapper {
-  min-height: 60vh;
   flex: 1;
   padding: 2rem 0;
 }
@@ -560,10 +562,6 @@ a {
   max-width: 300px;
 }
 
-.bg-green {
-  background-color: #3bb143;
-  background-color: #789e54;
-}
 
 /*tarif,buy*/
 
@@ -614,7 +612,7 @@ h3.tarif {
   margin: 13px;
 }
 
-.tarif-section .container {
+.tarif .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -638,16 +636,22 @@ h3.tarif {
   text-align: center;
 }
 
+.img-buy {
+  width: 50%;
+  height: auto;
+}
+
+.card-header{
+  height:auto ;
+  font-size: 30px;
+}
+
 .card-header,
 .card-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.card-header img {
-  width: 80%;
-  height: auto;
 }
 
 .card-body {
@@ -729,22 +733,28 @@ h3.tarif {
   max-width: 1000px;
   margin: 3rem auto;
 }
+
 .card {
   border: none;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
-.card-header {
-  background-color: #a5b5d1;
+.card-header { 
   color: white;
   font-weight: 500;
   border-radius: 10px 10px 0 0 !important;
 }
+
+.account-container .card-header{
+  color: black;
+}
+
 .btn-custom-primary {
   background-color: #a5b5d1;
   border-color: #94a4c0;
 }
+
 .btn-custom-primary:hover {
   background-color: #8799b5;
 }

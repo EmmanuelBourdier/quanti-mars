@@ -1,13 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="tarif">
-    <section class="tarif-intro"> 
-        <h1 class="heading-2">Achat du pack</h1>
-        </div>
-    </section>
-    <section class="tarif-section">  
-        <div class="container mx-auto" id="tarif" >
+<div class="tarif">   
+        <h1 class="heading-2 mb-5">Achat du pack</h1>     
+        <div class="container mx-auto mt-5" id="tarif" >
             <div class="tarif-left">
                 <h2 class="sub-heading-1 {#tarif-section-title#}">Modalités</h2>
                 <p><strong> Nos Packs</strong>  vous permettent d'utiliser le calculateur en fonction du nombre de crédits achetés.</p> 
@@ -47,8 +43,7 @@
                     {{ form_end(form) }}
                 </div>
             </div>
-            </div>
-    </section>
+        </div>
 </div>
     
 {% endblock %}
