@@ -10,6 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
 
 class UserPackCrudController extends AbstractCrudController
 {
@@ -32,7 +33,7 @@ class UserPackCrudController extends AbstractCrudController
             AssociationField::new('pack')->setLabel('Pack')->formatValue(function ($value, $entity) {
                 return $entity->getPack()->getName(); 
             }),
-            TextField::new("credit")->setLabel("Credit")->hideOnForm(),
+            IntegerField::new("credit")->setLabel("Credit")->hideOnForm(),
         ];
     }
    

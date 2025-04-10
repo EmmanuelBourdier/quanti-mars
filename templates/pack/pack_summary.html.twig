@@ -1,31 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<main class="tarif">
-    <section class="tarif-intro"> 
-        <h1 class="tarif-title">Résumé du pack choisi</h1>
-        </div>
-    </section>
-    <section class="tarif-section">  
-        <div class="container mx-auto">
-            <div class="tarif-left">
-                <h2 class="tarif-section-title">Nom: {{ pack.name }}</h2>
-                <h4>Prix: {{ pack.price }} €</h4>
-                <p>Le pack {{ pack.name }} vous permet d'utiliser le calculateur {{ pack.quantity }} fois.</p> 
-                <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
-                à l'écran et sous un format PDF téléchargeable.
-                </p>
-            </div>
-            <div class="tarif-right">
-            <div class="prix-cube pack d-flex flex-column text-center py-5">
-                    <form action="{{ path('app_account_payment', {'packId': pack.id}) }}" method="POST">
-                    <button type="submit">Checkout avec Stripe</button>
-                    </form>
-            </div>
+<div class="tarif bg-gris py-5">     
+    <h1 class="heading-2 mb-1 text-center">Résumé du pack choisi</h1>
+    <a href="{{ path('app_pack_buy') }}" class="text-muted" >(Retour au choix du pack)</a>      
+    <div class="container mx-auto mt-5">
+        <div class="tarif-left col-md-6 col-sm-12 mt-2">
+            <h4 class=" mb-4">Nom: {{ pack.name }} <span class="prix-tarif">Prix: {{ pack.price }} €</span></h4>
+            <p>Le pack {{ pack.name }} vous permet d'utiliser le calculateur {{ pack.quantity }} fois.</p> 
+            <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+            à l'écran et sous un format PDF téléchargeable.
+            </p>
+            <div class="d-flex justify-content-center py-5 align-items-center">
+                <form action="{{ path('app_account_payment', {'packId': pack.id}) }}" method="POST">
+                <button class="btn btn-primary btn-lg"type="submit">Commander avec Stripe</button>
+                </form>
             </div>
         </div>
-    </section>
-</main>
-    
+        
+            
+        
+    </div>    
+</div>    
 {% endblock %}
     

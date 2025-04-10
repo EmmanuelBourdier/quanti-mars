@@ -12,6 +12,27 @@ body {
 }
 
 /*color*/
+
+/* differents bleu ajout le 9/4/25 */
+
+.bg-bleu-ma{
+  background-color: #114e;
+}
+.bg-bleu-roi{
+  background-color: #0c42c0;
+}
+.bg-bleu-roi{
+  background-color: #2128f5;
+}
+.bg-bleu-ciel{
+  background-color: #39a8ff;
+}  
+.bg-bleu-cielc{
+  background-color: #84dbf0;
+}
+
+/* fin ajout  le 9/4/25 */
+
 .bg-grey {
   background-color: #a5b5d1;
   /*avant #93a9bc;*/
@@ -37,6 +58,12 @@ body {
   border-radius: 0px; /*border-radius: 10px*/
   padding: 0px; /*pading de 16px*/
 }
+
+.text-muted{
+  color:grey;
+  font-style: italic ;
+}
+
 
 .transparent {
   background-color: transparent;
@@ -597,7 +624,6 @@ h3.tarif {
 
 .tarif-title {
   display: flex;
-
   font-family: "Anton", sans-serif;
   margin: 40px auto;
   border: 1px solid gray;
@@ -615,25 +641,36 @@ h3.tarif {
 .tarif .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  margin: 13px;
 }
 
 .tarif-left {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 70%;
+  justify-content: start;
   text-align: start;
+  padding: 15px;
+  background-color: white;
 }
 
 .tarif-right {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30%;
   text-align: center;
+  background-color: white;
+  padding:15px;
+}
+
+.prix-tarif{
+ float:right ;
+ margin-right: 10px;
+  
 }
 
 .img-buy {
@@ -655,7 +692,7 @@ h3.tarif {
 }
 
 .card-body {
-  min-height: 223px;
+  min-height: 273px;
 }
 
 .list-comment {

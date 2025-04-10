@@ -1,33 +1,33 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<main class="tarif">
-    <section class="tarif-intro"> 
-        <h1 class="tarif-title">Résumé de l'abonnement choisi</h1>
-        </div>
+{#<main class="tarif">#}
+    {#<div class="tarif-intro"> #}
+<div class="tarif bg-gris py-5">
+    <h1 class="heading-2 mb-1 text-center">Résumé de l'abonnement choisi</h1>
+    <a href="{{ path('app_abonnement_buy') }}" class="text-muted" >(Retour au choix de l'abonnement)</a>
+    <div class="container mx-auto mt-5">    
+        <div class="tarif-left col-md-6 col-sm-12 mt-2">
+            <h4 class=" mb-4">Nom: {{ abonnement.name }} <span class="prix-tarif">Prix: {{ abonnement.price }} €</span></h4>
+            <p>L'abonnement' {{ abonnement.name }} vous permet d'utiliser le calculateur pendant une durée de {{ abonnement.duration }} jours.</p> 
+            <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+                à l'écran et sous un format PDF téléchargeable.</p>
+            <p>Vous pouvez accéder à vos calculs précedents dans la rubrique Profil->Mes calculs
+            </p>
+       {#} </div>
     </section>
     <section class="tarif-section">  
         <div class="container mx-auto">
-            <div class="tarif-left">
-                <h2 class="tarif-section-title">{{ abonnement.name }}</h2>
-                <h4>Prix: {{ abonnement.price }} €</h4>
-                <p>L'abonnement  {{ abonnement.name }} vous permet d'utiliser le calculateur pendant une durée de {{ abonnement.duration }} jours.</p> 
-                <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
-                à l'écran et sous un format PDF téléchargeable.
-                </p>
-                <p>Vous pouvez accéder à vos calculs précedents dans la rubrique Profil->Mes calculs
-                </p>
-            </div>
-            <div class="tarif-right">
-            <div class="prix-cube pack d-flex flex-column text-center py-5">
-                    <form action="{{ path('app_account_paymentAbo', {'abonnementId': abonnement.id}) }}" method="POST">
-                    <button type="submit">Checkout avec Stripe</button>
-                    </form>
-            </div>
+            <div class="tarif-left">#}                
+            <div class="d-flex justify-content-center py-5 align-items-center">
+                <form action="{{ path('app_account_paymentAbo', {'abonnementId': abonnement.id}) }}" method="POST">
+                <button class="btn btn-primary btn-lg"type="submit">Commander avec Stripe</button>
+                </form>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</div> 
+</main> #}
     
 {% endblock %}
     

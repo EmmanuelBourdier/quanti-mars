@@ -14,7 +14,7 @@
                     <p class="prix-text">Solutions idéales pour vos calculs
                     {#Payez en une fois pour 1 à 10 calculs.#}</p>
                 </div>
-                <a href="{{ path('app_buy') }}" class="prix-link" >
+                <a href="{{ path('app_pack_buy') }}" class="prix-link" >
                 <div class="prix-liste">
                     <div class="items-prix"><p>A l'unité <br><span class="prix">{{packs[0].price}} €</span></p></div>
                     <div class="items-prix"><p>Pack de 3 <br><span class="prix">{{packs[1].price}} €</span></p></div>
@@ -27,7 +27,7 @@
                     <h3 class="py-2" >Abonnements</h3>
                     <p class="prix-text">Selon vos besoins.</p>
                 </div>
-                <a href="{{ path('app_buy') }}" class="prix-link" >
+                <a href="{{ path('app_abonnement_buy') }}" class="prix-link" >
                 <div class="prix-liste">
                     <div class="items-prix"><p>1 semaine<br><span class="prix">{{abonnements[0].price}} €</span></p></div>
                     <div class="items-prix"><p> 1 mois <br><span class="prix">{{abonnements[1].price}} €</span></p></div>

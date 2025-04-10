@@ -1,49 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="tarif">   
-        <h1 class="heading-2 mb-5">Achat du pack</h1>     
-        <div class="container mx-auto mt-5" id="tarif" >
-            <div class="tarif-left">
-                <h2 class="sub-heading-1 {#tarif-section-title#}">Modalités</h2>
-                <p><strong> Nos Packs</strong>  vous permettent d'utiliser le calculateur en fonction du nombre de crédits achetés.</p> 
-                <p>Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
-                à l'écran et sous un format PDF téléchargeable.
-                </p>
-                    <ul>
-                        <li>Chaque obtention de résultat fourni par notre calculateur consomme un crédit.</li>
-                        <li>Chaque modification de résultat, nécessitant donc de refaire un calcul, consomme un crédit.</li>
-                    </ul>
-            </div>
-            <div class="tarif-right">
-                <div class="prix-cube pack d-flex flex-column text-center">
-                    <div class="prix-header">
-                        <h3 class="prix-text-bold">Packs</h3>
-                        <p class="prix-text">Payez en une fois de 1 à 10 calculs.</p>
-                    </div>
-                    {{ form_start(form) }}
-                    <div class="prix-liste">
-                        <div class="items-prix">
-                            
-                            <p>A l'unité <br><span class="prix">{{packs[0].price}} €</span></p>
-                            {{ form_widget(form.pack.0) }}
-                        </div>
-                        <div class="items-prix">
-                        
-                            <p>Pack de 3 <br><span class="prix">{{packs[1].price}} €</span></p>
-                            {{ form_widget(form.pack.1) }}
-                        </div>
-                        <div class="items-prix">
-                            
-                            <p>Pack de 10 <br><span class="prix">{{packs[2].price}} €</span></p>
-                            {{ form_widget(form.pack.2) }}
-                        </div>
-                    </div>
-                    <button class="btn btn-success my-2" type="submit">Acheter</button>
-                    {{ form_end(form) }}
+<div class="tarif bg-gris py-5">   
+    <h1 class="heading-2 mb-5">Achat du pack</h1>     
+    <div class="container mx-auto mt-5" id="tarif" >
+        <div class="tarif-left col-md-6 col-sm-12 mt-2">
+            <h2 class="sub-heading-1 mb-4">Modalités</h2>
+            <p><strong> Nos Packs</strong>  vous permettent d'utiliser le calculateur en fonction du nombre de crédits achetés.<br>
+            Le calculateur vous délivrera la liste exhaustive des matériaux nécessaires à la réalisation de la structure que vous avez choisie 
+            à l'écran et sous un format PDF téléchargeable.
+            </p>
+                <ul>
+                    <li>Chaque obtention de résultat fourni par notre calculateur consomme un crédit.</li>
+                    <li>Chaque modification de résultat, nécessitant donc de refaire un calcul, consomme un crédit.</li>
+                </ul>
+        </div>
+        <div class="tarif-right col-md-4 col-sm-12 mt-2">
+            <div class="prix-cube pack d-flex flex-column text-center">
+                <div class="prix-header">
+                    <h3 class="prix-text-bold">Packs</h3>
+                    <p class="prix-text">Payez en une fois de 1 à 10 calculs.</p>
                 </div>
+                {{ form_start(form) }}
+                <div class="prix-liste">
+                    <div class="items-prix">
+                        <p>A l'unité <br><span class="prix">{{packs[0].price}} €</span></p>
+                        {{ form_widget(form.pack.0) }}
+                    </div>
+                    <div class="items-prix">                    
+                        <p>Pack de 3 <br><span class="prix">{{packs[1].price}} €</span></p>
+                        {{ form_widget(form.pack.1) }}
+                    </div>
+                    <div class="items-prix">                        
+                        <p>Pack de 10 <br><span class="prix">{{packs[2].price}} €</span></p>
+                        {{ form_widget(form.pack.2) }}
+                    </div>
+                </div>
+                <button class="btn btn-success my-2" type="submit">Acheter</button>
+                {{ form_end(form) }}
             </div>
         </div>
-</div>
-    
+    </div>
+</div>   
 {% endblock %}
