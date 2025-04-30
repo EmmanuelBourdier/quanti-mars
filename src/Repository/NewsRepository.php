@@ -20,7 +20,7 @@ class NewsRepository extends ServiceEntityRepository
         {
           return $this->createQueryBuilder('c')
                 ->orderBy('c.createdAt', 'DESC')
-                ->setMaxResults(1) 
+                ->setMaxResults(3) 
                 ->getQuery()
                ->getOneOrNullResult()
          ;

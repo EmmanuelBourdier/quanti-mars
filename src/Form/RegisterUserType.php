@@ -40,7 +40,7 @@ class RegisterUserType extends AbstractType
             'attr' => ['placeholder' => 'Entrez votre prénom']
         ])
         ->add('email', EmailType::class, [
-                'label' => 'Email',
+                'label' => 'Adresse e-mail',
                 'required' => true,
                 'constraints' => [
                     new NotBlank(["message" => "L'email ne peut pas être vide."]),
@@ -70,7 +70,7 @@ class RegisterUserType extends AbstractType
                 ],
             'first_options'  => [
                 'label' => 'Mot de passe',
-                'attr' => ['placeholder' => 'Entrez votre mot de passe (6 caractères minimum)',"id"=>"password"],
+                'attr' => ['placeholder' => '6 caractères minimum',"id"=>"password"],
                 'hash_property_path' => 'password'
             ],
             'second_options' => [
@@ -83,7 +83,7 @@ class RegisterUserType extends AbstractType
 
         
         ->add('submit', SubmitType::class, [
-            'label' => 'Inscription', 'attr' => ['class' => 'btn-inscrire btn ']
+            'label' => 'je m\'inscris', 'attr' => ['class' => 'btn-inscrire btn ']
         ])  
 
         ;

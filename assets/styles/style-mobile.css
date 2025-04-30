@@ -191,9 +191,10 @@
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 500px) {
   .tabplaf {
     font-size: 10px;
+    width: 100%;
   }
   .prix-cube {
     width: 320px;

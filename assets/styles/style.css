@@ -21,7 +21,7 @@ body {
 .bg-bleu-roi{
   background-color: #0c42c0;
 }
-.bg-bleu-roi{
+.bg-bleu-roic{
   background-color: #2128f5;
 }
 .bg-bleu-ciel{
@@ -51,6 +51,20 @@ body {
 }
 .grey {
   color: gray;
+}
+
+.navbar-toggler {
+  border-color:#40E0D0;
+  color:transparent; 
+}
+
+
+.navbar-toggler-icon {
+  background-color: #11114400; /* for custom hamburger color */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%2340E0D0' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' fill='none'/%3E%3C/svg%3E") !important;
 }
 
 .bg-gris {
@@ -114,6 +128,13 @@ footer {
   color: white;
   width: 100%;
 }
+
+.btn-inscrire:hover{
+  color:#0d5298;
+  background-color: white;
+  border: 1px solid #0d5298;
+}
+
 
 .form-control {
   margin-bottom: 1rem;
@@ -203,7 +224,16 @@ a {
 
 .logo {
   font-size: 35px !important;
-  color: #3bb143;
+  /*color: #3bb143;
+  /*essai couleur*/
+  color: #40E0D0;
+  /*color:#FF69B4;
+  color:#BFFF00;
+  color: #FF6F61;
+  color:#E63946 ;
+  color: #FF4500;
+  color: #FF69B4;
+  /*essai couleur*/
 }
 
 .logo-mobile {
@@ -751,6 +781,26 @@ h3.tarif {
 .tr-center {
   text-align: center;
 }
+/* ajout 25/04/25/*/
+th, td {
+  border: 2px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+thead {
+  background-color: #83bcfc;
+ /*  background-color: #0c42c0;
+/* 
+  background-color: #2128f5;
+/* 
+  background-color: #39a8ff;
+/* 
+  background-color: #84dbf0;
+*/
+}
+
+/* fin ajout 25/04/25/*/
 
 /*achat du pack */
 
@@ -777,6 +827,11 @@ h3.tarif {
   margin-bottom: 1.5rem;
   border-radius: 10px;
 }
+
+#commande{
+  min-height: 386px;
+}
+
 .card-header { 
   color: white;
   font-weight: 500;
@@ -798,4 +853,18 @@ h3.tarif {
 .data-label {
   font-weight: 600;
   color: #566a88;
+}
+
+.btn-custom-success {
+  color: green;
+  background-color:white;
+  border-color: green;
+  
+}
+
+.btn-custom-success:hover {
+  
+  background-color:green;
+  color: white;
+
 }

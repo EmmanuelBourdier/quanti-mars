@@ -1,9 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="form-container my-5">
-    <div class="form-wrapper col-md-6 offset-md-3">
-        <h1 class="text-center">Inscription</h1>
+<div class="form-container my-5 mx-auto">
+    <div class="form-wrapper col-md-6 col-sm-10 mx-auto">
+        <h1 class="text-center">Inscription</h1><br>
+        <p>Pour calculer vite et juste, comme un pro.Lancez-vous avec Quanti-Plaque.</p><br>
         {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
          <div class="form-group">
                 {{ form_label(form.lastname) }}

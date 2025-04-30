@@ -47,9 +47,9 @@
         <!-- Subscriptions Column -->
         <div class="col-lg-6">
             <!-- Pack Information Card -->
-            <div class="card mb-4">
+            <div class="card mb-4"id="commande">
                 <div class="card-header">
-                    <h4 class="mb-0">Mon Pack</h4>
+                    <h4 class="mb-0">Mes Commandes</h4>
                 </div>
                 <div class="card-body">
                     {% if currentPack %}
@@ -64,15 +64,6 @@
                             <i class="fas fa-info-circle me-2"></i>Vous n'avez pas de pack actif
                         </div>
                     {% endif %}
-                </div>
-            </div>
-            
-            <!-- Subscription Information Card -->
-            <div class="card">
-                <div class="card-header">
-                    <h4 class="mb-0">Mon Abonnement</h4>
-                </div>
-                <div class="card-body">
                     {% if currentAbonnement %}
                         <div class="mb-2">
                             <span class="data-label">Abonnement actuel:</span> {{ currentAbonnement.name }}
@@ -87,6 +78,13 @@
                         <div class="alert alert-light text-center">
                             <i class="fas fa-info-circle me-2"></i>Vous n'avez pas d'abonnement actif
                         </div>
+                    {% endif %}
+                    {% if currentPack is  empty or currentAbonnement is  empty %}
+                    <div class="mt-4 text-center">
+                        <a href="{{ path('app_buy')}}" class="btn btn-custom-success">
+                            <i class="fas fa-cogs me-2"></i>Commander
+                        </a>
+                    </div>
                     {% endif %}
                 </div>
             </div>
