@@ -14,7 +14,7 @@ class SlideController extends AbstractController
     public function index(CommentaireRepository $commentaireRepository, NewsRepository $newsRepository): Response
     {
         return $this->render('components/section-slide.html.twig', [
-         'commentaires' => $commentaireRepository->findRandomVerifiedComments(),
+         'comments' => $commentaireRepository->findRandomVerifiedComments(),
           'news' => $newsRepository->findByCurrent()
                 
         ]);

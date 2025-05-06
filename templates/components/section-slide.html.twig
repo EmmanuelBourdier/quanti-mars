@@ -1,0 +1,61 @@
+{# Example: templates/home/section_sliders.html.twig #}
+<div class="container my-5">
+  <div class="row">
+    <!-- Comments Slider (Left) -->
+    <div class="col-md-6">
+      <h3 class="mb-3">Commentaires</h3>
+      <div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% for comment in comments|slice(0,3) %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <div class="card">
+                <div class="card-body">
+                  <h5>
+                    {% if comment.nom or comment.prenom %}
+                        {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
+                    {% else %}
+                        Anonyme
+                    {% endif %}
+                    </h5>
+                  <p class="card-text">{{ comment.message }}</p>
+                  <small class="text-muted">{{ comment.createAt|date('d/m/Y') }}</small>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#commentsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#commentsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+    <!-- News Slider (Right) -->
+    <div class="col-md-6">
+      <h3 class="mb-3">Actualités</h3>
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          {% for item in news|slice(0,3) %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.title }}</h5>
+                  <p class="card-text">{{ item.content }}</p>
+                  <small class="text-muted">{{ item.createdAt|date('d/m/Y') }}</small>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
