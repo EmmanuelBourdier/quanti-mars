@@ -1,0 +1,19 @@
+<body>
+    <div class="container">
+        <h1>Bienvenue {{ user.firstname }} !</h1>
+        <p>Votre compte a été créé avec succès sur notre plateforme.</p>
+        <p>Voici vos informations de connexion :</p>
+        <ul>
+            <li><strong>Email :</strong> {{ user.email }}</li>
+            <li><strong>Mot de passe :</strong> {{ password }}</li>
+        </ul>
+        <p>
+            <a href="{{ url('app_login') }}">Connectez-vous maintenant</a> pour commencer à
+utiliser nos services.
+        </p>
+        <div class="footer">
+            <p>Ceci est un email automatique, merci de ne pas y répondre.</p>
+        </div>
+    </div>
+</body>
+</html>

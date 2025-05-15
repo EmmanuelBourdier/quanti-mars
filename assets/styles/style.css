@@ -282,17 +282,20 @@ a {
 
 .heading-1 {
   font-size: 70px;
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 .sub-heading-1 {
   font-size: 40px;
   font-weight: bold;
+
 }
 
 .heading-2 {
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 50px;
+  font-weight: bold;
   /*padding-top: 50px;*/
   padding-top: 30px;
   letter-spacing: 2px;
@@ -347,7 +350,7 @@ a {
 .prix-title {
   padding: 20px;
 
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: black;
 }
 
@@ -648,13 +651,13 @@ a {
 }
 
 h3.tarif {
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 40px auto;
 }
 
 .tarif-title {
   display: flex;
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 40px auto;
   border: 1px solid gray;
   border-radius: 10px;
@@ -807,7 +810,8 @@ thead {
 /*Page calculateur */
 
 .pcalc-title {
-  font-family: "Anton", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
   margin: 40px auto;
   border: 3px solid #3bb143;
   border-radius: 10px;
@@ -867,4 +871,20 @@ thead {
   background-color:green;
   color: white;
 
+}
+
+/*slider*/
+.carousel-inner{
+  width: 100%;
+  background-color: transparent;
+}
+
+.carousel-item{
+  width: 75%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon{
+  color: #007bff;
 }
