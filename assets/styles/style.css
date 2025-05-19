@@ -281,7 +281,7 @@ a {
 }
 
 .heading-1 {
-  font-size: 70px;
+  font-size: 60px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
 }
@@ -874,17 +874,28 @@ thead {
 }
 
 /*slider*/
+
+.carousel{
+ display: flex; 
+ justify-content: center;
+ align-items: center;
+}
+
 .carousel-inner{
   width: 100%;
   background-color: transparent;
+  
 }
 
 .carousel-item{
   width: 75%;
   background-color: white;
   border-radius: 10px;
+  margin: 0 auto;
 }
 
-.carousel-control-prev-icon{
-  color: #007bff;
+.carousel-control-next,
+.carousel-control-prev{
+  color: #007bff !important;
+  z-index: 1000;
 }
