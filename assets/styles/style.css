@@ -875,27 +875,85 @@ thead {
 
 /*slider*/
 
-.carousel{
- display: flex; 
- justify-content: center;
- align-items: center;
-}
-
-.carousel-inner{
+.carousel {
+  position: relative;
   width: 100%;
-  background-color: transparent;
-  
+  background-size: cover;
+  background-position: center;
+  padding: 20px 50px; /* Add padding to make space for controls */
+  border-radius: 10px;
 }
 
-.carousel-item{
-  width: 75%;
+.carousel-inner {
+  width: 80%; /* Reduced from 90% to show more background */
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.carousel-item {
   background-color: white;
   border-radius: 10px;
-  margin: 0 auto;
+  height: 220px; /* Fixed height for all carousel items */
 }
 
-.carousel-control-next,
-.carousel-control-prev{
-  color: #007bff !important;
-  z-index: 1000;
+.carousel-item .card {
+  height: 100%;
+}
+
+.carousel-item .card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  background-color: rgba(0, 123, 255, 0.5); /* More visible background */
+  border-radius: 50%;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1; /* Fully visible by default */
+  position: absolute;
+}
+
+.carousel-control-prev {
+  left: 5px; /* Position outside content area but inside padding */
+}
+
+.carousel-control-next {
+  right: 5px; /* Position outside content area but inside padding */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* White arrows for better visibility */
+  width: 20px;
+  height: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 123, 255, 0.8);
+}
+
+/* Text truncation with ellipsis */
+.text-truncate-comment {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Show 3 lines maximum */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+/* Add these classes to set background images for each carousel */
+#commentsCarousel {
+  background-image: url(''); /* Update with your actual image path */
+}
+
+#newsCarousel {
+  background-image: url(''); /* Update with your actual image path */
 }
