@@ -93,7 +93,7 @@ main {
 
 .content-wrapper {
   flex: 1;
-  padding: 2rem 0;
+  padding: 2rem 0 0;
 }
 
 footer {
@@ -880,7 +880,6 @@ thead {
   width: 100%;
   background-size: cover;
   background-position: center;
-  padding: 20px 50px; /* Add padding to make space for controls */
   border-radius: 10px;
 }
 
@@ -910,7 +909,7 @@ thead {
 .carousel-control-prev,
 .carousel-control-next {
   width: 40px;
-  background-color: rgba(0, 123, 255, 0.5); /* More visible background */
+  background-color: white; /* More visible background */
   border-radius: 50%;
   height: 40px;
   top: 50%;

@@ -22,14 +22,14 @@ class PasswordUserType extends AbstractType
         $builder
         ->add('actualPassword', PasswordType::class, [
             'label' => 'Mot de passe actuel',
-            'attr' => ['placeholder' => 'Entrez votre mot de passe actuel'],
+            'attr' => ['placeholder' => 'Veuillez entrer votre mot de passe actuel'],
             'mapped' => false
         ])
            ->add('plainPassword', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'constraints' => [
                     new NotBlank([
-                        'message' => 'Veuillez entrer un nouveau mot de passe',
+                        'message' => 'Saisissez votre nouveau mot de passe',
                     ]),
                     new Length([
                         'min' => 6,
@@ -39,13 +39,13 @@ class PasswordUserType extends AbstractType
                     ]),
                 ],
                 'first_options'  => [
-                    'label' => 'Mot de passe',
-                    'attr' => ['placeholder' => 'Entrez votre nouveau mot de passe'],
+                    'label' => 'Nouveau mot de passe',
+                    'attr' => ['placeholder' => 'Saisissez votre nouveau mot de passe'],
                     'hash_property_path' => 'password'
                 ],
                 'second_options' => [
-                    'label' => 'Confirmer le mot de passe',
-                    'attr' => ['placeholder' => 'Confirmez votre nouveau mot de passe'],
+                    'label' => 'Confirmer le nouveau mot de passe',
+                    'attr' => ['placeholder' => 'Veuillez confirmer votre nouveau mot de passe'],
                 ],
                 'invalid_message' => 'Les mots de passe ne correspondent pas',
                 'mapped' => false,

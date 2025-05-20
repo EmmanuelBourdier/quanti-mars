@@ -1,7 +1,7 @@
 <div class="py-5 bg-bleu-ciel">
   <div class="row ">
     <!-- Comments Slider (Left) -->
-    <div class="col-md-6">
+    <div class="col-md-6 text-center">
       <h3 class="mb-3 text-center">Commentaires</h3>
       <div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-inner">
@@ -34,15 +34,19 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <a class="btn btn-success my-3" href="{{ path('app_commentaire_liste') }}">
+      <em>Lintegralité de nos commantaires</em>
+      </a>
     </div>
     
     <!-- News Slider (Right) -->
-    <div class="col-md-6">
+    <div class="col-md-6 text-center">
       <h3 class="mb-3 text-center">Actualités</h3>
-      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6300">
         <div class="carousel-inner">
           {% for item in news|slice(0,3) %}
             <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <a class="" href="{{ path('app_news') }}">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">{{ item.title }}</h5>
@@ -62,6 +66,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <a class="btn btn-success my-3" href="{{ path('app_news') }}">
+      <em>Toutes nos infos</em>
+      </a>
     </div>
   </div>
 </div>
