@@ -35,7 +35,10 @@ class PackController extends AbstractController
             'userId' => $userId
         ]);
         //dd($userPack);
-
+        if (!$userPack) {
+        $this->addFlash('error', 'Vous n\'avez de pack avec des crédits ');
+        return $this->redirectToRoute('app_account');
+    }
         $credit= $userPack->getCredit();
         //dd($credit);
 
