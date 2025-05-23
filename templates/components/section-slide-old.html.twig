@@ -1,0 +1,74 @@
+<div class="py-5 bg-bleu-ciel">
+  <div class="row ">
+    <!-- Comments Slider (Left) -->
+    <div class="col-md-6 text-center">
+      <h3 class="mb-3 text-center">Commentaires</h3>
+      <div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+        <div class="carousel-inner">
+          {% for comment in comments|slice(0,3) %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <a class="" href="{{ path('app_commentaire_liste') }}">
+              <div class="card">
+                <div class="card-body">
+                  <h5>
+                    {% if comment.nom or comment.prenom %}
+                        {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
+                    {% else %}
+                        Anonyme
+                    {% endif %}
+                    </h5>
+                  <p class="card-text">{{ comment.message }}</p>
+                  <small class="text-muted">{{ comment.createAt|date('d/m/Y') }}</small>
+                </div>
+              </div>
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#commentsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#commentsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <a class="btn btn-success my-3" href="{{ path('app_commentaire_liste') }}">
+      <em>Tous nos commentaires</em>
+      </a>
+    </div>
+    
+    <!-- News Slider (Right) -->
+    <div class="col-md-6 text-center">
+      <h3 class="mb-3 text-center">Actualités</h3>
+      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6300">
+        <div class="carousel-inner">
+          {% for item in news|slice(0,3) %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <a class="" href="{{ path('app_news') }}">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.title }}</h5>
+                  <p class="card-text">{{ item.content }}</p>
+                  <small class="text-muted">{{ item.createdAt|date('d/m/Y') }}</small>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <a class="btn btn-success my-3" href="{{ path('app_news') }}">
+      <em>Toutes nos infos</em>
+      </a>
+    </div>
+  </div>
+</div>

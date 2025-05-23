@@ -1,74 +1,82 @@
-<div class="py-5 bg-bleu-ciel">
-  <div class="row ">
-    <!-- Comments Slider (Left) -->
-    <div class="col-md-6 text-center">
-      <h3 class="mb-3 text-center">Commentaires</h3>
-      <div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-        <div class="carousel-inner">
-          {% for comment in comments|slice(0,3) %}
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
-              <a class="" href="{{ path('app_commentaire_liste') }}">
-              <div class="card">
-                <div class="card-body">
-                  <h5>
-                    {% if comment.nom or comment.prenom %}
-                        {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
-                    {% else %}
-                        Anonyme
-                    {% endif %}
-                    </h5>
-                  <p class="card-text">{{ comment.message }}</p>
-                  <small class="text-muted">{{ comment.createAt|date('d/m/Y') }}</small>
+<div class="slide-section bg-light py-5 mb-0">
+  <div class="container">
+    <div class="row">
+      <!-- Comments Slider (Left) -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="section-header mb-4">
+          <h3 class="slide-heading">Témoignages</h3>
+          <div class="heading-underline"></div>
+        </div>
+        <div id="commentsCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="5500">
+          <div class="carousel-inner">
+            {% for comment in comments|slice(0,3) %}
+              <div class="carousel-item {% if loop.first %}active{% endif %}">
+                <div class="testimonial-card">
+                  <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text text-truncate-comment">{{ comment.message }}</p>
+                    <div class="testimonial-author">
+                      <div class="author-avatar">
+                        <!-- Placeholder for avatar or initials -->
+                        <div class="avatar-initials">{{ (comment.nom|default('A')|first|upper) }}{{ (comment.prenom|default('')|first|upper) }}</div>
+                      </div>
+                      <div class="author-info">
+                        <h5>
+                          {% if comment.nom or comment.prenom %}
+                              {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
+                          {% else %}
+                              Anonyme
+                          {% endif %}
+                        </h5>
+                        <small>{{ comment.createAt|date('d/m/Y') }}</small>
+                        <a href="{{ path('app_commentaire_liste') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            {% endfor %}
+          </div>
+          <div class="carousel-indicators custom-indicators">
+            {% for i in 0..2 %}
+              <button type="button" data-bs-target="#commentsCarousel" data-bs-slide-to="{{ i }}" 
+                      {% if i == 0 %}class="active"{% endif %}></button>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      
+      <!-- News Slider (Right) -->
+      <div class="col-md-6">
+        <div class="section-header mb-4">
+          <h3 class="slide-heading">Actualités</h3>
+          <div class="heading-underline"></div>
+        </div>
+        <div id="newsCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+          <div class="carousel-inner">
+            {% for item in news|slice(0,3) %}
+              <div class="carousel-item {% if loop.first %}active{% endif %}">
+                <div class="news-card">
+                  <div class="news-content">
+                    <h5 class="news-title">{{ item.title }}</h5>
+                    <p class="news-text text-truncate-comment">{{ item.content }}</p>
+                    <div class="news-footer">
+                      <small><i class="far fa-calendar-alt"></i> {{ item.createdAt|date('d/m/Y') }}</small>
+                      <a href="{{ path('app_news') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              </a>
-            </div>
-          {% endfor %}
+            {% endfor %}
+          </div>
+          <div class="carousel-indicators custom-indicators">
+            {% for i in 0..2 %}
+              <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="{{ i }}" 
+                      {% if i == 0 %}class="active"{% endif %}></button>
+            {% endfor %}
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#commentsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#commentsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <a class="btn btn-success my-3" href="{{ path('app_commentaire_liste') }}">
-      <em>Tous nos commentaires</em>
-      </a>
-    </div>
-    
-    <!-- News Slider (Right) -->
-    <div class="col-md-6 text-center">
-      <h3 class="mb-3 text-center">Actualités</h3>
-      <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6300">
-        <div class="carousel-inner">
-          {% for item in news|slice(0,3) %}
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
-              <a class="" href="{{ path('app_news') }}">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">{{ item.title }}</h5>
-                  <p class="card-text">{{ item.content }}</p>
-                  <small class="text-muted">{{ item.createdAt|date('d/m/Y') }}</small>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      <a class="btn btn-success my-3" href="{{ path('app_news') }}">
-      <em>Toutes nos infos</em>
-      </a>
     </div>
   </div>
 </div>

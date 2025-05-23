@@ -875,67 +875,157 @@ thead {
 
 /*slider*/
 
-.carousel {
+/* Slide Section Styles */
+.slide-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  margin-bottom: 0; /* Pour éliminer l'espace avec le footer */
+}
+
+.section-header {
   position: relative;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
 }
 
-.carousel-inner {
-  width: 80%; /* Reduced from 90% to show more background */
-  margin: 0 auto;
-  background-color: transparent;
+.slide-heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #0d5298;
+  margin-bottom: 20px;
 }
 
-.carousel-item {
+.heading-underline {
+  width: 60px;
+  height: 3px;
+  background-color: #40e0d0;
+  margin-bottom: 20px;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
   background-color: white;
-  border-radius: 10px;
-  height: 220px; /* Fixed height for all carousel items */
-}
-
-.carousel-item .card {
-  height: 100%;
-}
-
-.carousel-item .card-body {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  position: relative;
+  height: 280px;
   display: flex;
   flex-direction: column;
+}
+
+.quote-icon {
+  color: #40e0d0;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.avatar-initials {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 40px;
-  background-color: white; /* More visible background */
+  background-color: #0d5298;
+  color: white;
   border-radius: 50%;
-  height: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 1; /* Fully visible by default */
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
-.carousel-control-prev {
-  left: 5px; /* Position outside content area but inside padding */
+.author-info{
+  width: 75%;
 }
 
-.carousel-control-next {
-  right: 5px; /* Position outside content area but inside padding */
+.author-info h5 {
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(100%); /* White arrows for better visibility */
-  width: 20px;
-  height: 20px;
+.author-info small {
+  color: #6c757d;
 }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-  background-color: rgba(0, 123, 255, 0.8);
+.author-info .read-more{
+margin-left: 115px;
+}
+
+/* News Cards */
+.news-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-title {
+  color: #0d5298;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.news-text {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  color: #40e0d0;
+  font-weight: 500;
+  transition: all 0.3s;
+  text-align: end;
+}
+
+.read-more:hover {
+  color: #0d5298;
+  
+}
+
+/* Custom Carousel Controls */
+.custom-indicators {
+  bottom: -40px;
+}
+
+.custom-indicators button {
+  width: 30px;
+  height: 4px;
+  border-radius: 0;
+  background-color: #dee2e6;
+  opacity: 0.5;
+  margin: 0 5px;
+  padding: 0;
+  border:none;
+}
+.custom-indicators button.active {
+  opacity: 1;
+  background-color: #40e0d0;
+  height: 5px;
+}
+
+.custom-carousel {
+  padding-bottom: 40px;
 }
 
 /* Text truncation with ellipsis */
@@ -946,13 +1036,4 @@ thead {
   overflow: hidden;
   text-overflow: ellipsis;
   flex-grow: 1;
-}
-
-/* Add these classes to set background images for each carousel */
-#commentsCarousel {
-  background-image: url(''); /* Update with your actual image path */
-}
-
-#newsCarousel {
-  background-image: url(''); /* Update with your actual image path */
 }
