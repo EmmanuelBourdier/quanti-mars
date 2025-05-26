@@ -10,31 +10,35 @@
         <div id="commentsCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="5500">
           <div class="carousel-inner">
             {% for comment in comments|slice(0,3) %}
-              <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
                 <div class="testimonial-card">
                   <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
                   <div class="testimonial-content">
                     <p class="testimonial-text text-truncate-comment">{{ comment.message }}</p>
-                    <div class="testimonial-author">
-                      <div class="author-avatar">
-                        <!-- Placeholder for avatar or initials -->
-                        <div class="avatar-initials">{{ (comment.nom|default('A')|first|upper) }}{{ (comment.prenom|default('')|first|upper) }}</div>
-                      </div>
-                      <div class="author-info">
-                        <h5>
-                          {% if comment.nom or comment.prenom %}
-                              {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
-                          {% else %}
-                              Anonyme
-                          {% endif %}
-                        </h5>
-                        <small>{{ comment.createAt|date('d/m/Y') }}</small>
-                        <a href="{{ path('app_commentaire_liste') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
-                      </div>
-                    </div>
                   </div>
-                </div>  
-              </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-left">
+                            <div class="author-avatar">
+                                <!-- Placeholder for avatar or initials -->
+                                <div class="avatar-initials">{{ (comment.nom|default('A')|first|upper) }}{{ (comment.prenom|default('')|first|upper) }}</div>
+                            </div>
+                            <div class="author-info">
+                                <h5>
+                                {% if comment.nom or comment.prenom %}
+                                    {{ comment.nom|default('') }} {{ comment.prenom|default('') }}
+                                {% else %}
+                                    Anonyme
+                                {% endif %}
+                                </h5>
+                                <small>{{ comment.createAt|date('d/m/Y') }}</small>
+                            </div>
+                        </div>
+                        <div class="testimonial-right">
+                            <a href="{{ path('app_commentaire_liste') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
             {% endfor %}
           </div>
           <div class="carousel-indicators custom-indicators">
@@ -55,18 +59,18 @@
         <div id="newsCarousel" class="carousel slide custom-carousel" data-bs-ride="carousel" data-bs-interval="5000">
           <div class="carousel-inner">
             {% for item in news|slice(0,3) %}
-              <div class="carousel-item {% if loop.first %}active{% endif %}">
-                <div class="news-card">
-                  <div class="news-content">
-                    <h5 class="news-title">{{ item.title }}</h5>
-                    <p class="news-text text-truncate-comment">{{ item.content }}</p>
-                    <div class="news-footer">
-                      <small><i class="far fa-calendar-alt"></i> {{ item.createdAt|date('d/m/Y') }}</small>
-                      <a href="{{ path('app_news') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                <div class="carousel-item {% if loop.first %}active{% endif %}">
+                    <div class="news-card">
+                        <div class="news-content">
+                        <h5 class="news-title">{{ item.title }}</h5>
+                        <p class="news-text text-truncate-comment">{{ item.content }}</p>
+                        </div>
+                        <div class="news-footer">
+                        <small><i class="far fa-calendar-alt"></i> {{ item.createdAt|date('d/m/Y') }}</small>
+                        <a href="{{ path('app_news') }}" class="read-more">Lire plus <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
             {% endfor %}
           </div>
           <div class="carousel-indicators custom-indicators">
