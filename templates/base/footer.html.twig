@@ -7,7 +7,7 @@
       <!-- Section: Links -->
       <section class="">
         <!--Grid row-->
-        <div class="row">
+        <div class="d-flex justify-content-between w-100 flex-wrap">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h5 class="text-uppercase mb-4 font-weight-bold">
@@ -22,21 +22,20 @@
           <hr class="w-100 clearfix d-md-none" />
 
           <!-- Grid column -->
+          <div class=" mx-auto col-md-9 col-lg-9 col-xl-9 d-flex justify-content-evenly flex-wrap">
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+            <h6 class="text-uppercase mb-4 font-weight-bold">Informations</h6>
             <p>
-              <a class="text-white">MDBootstrap</a>
+              <a class="nav-link" href="{{ path('app_calcul') }}">Calculateur</a>
             </p>
             <p>
-              <a class="text-white">MDWordPress</a>
-            </p>
+              <a class="text-white" href="{{ path('app_buy') }}">Tarifs</a>
+            </p> 
             <p>
-              <a class="text-white">BrandFlow</a>
-            </p>
-            <p>
-              <a class="text-white">Bootstrap Angular</a>
+              <a class="text-white" href="{{ path('app_infotech') }}">Informations techniques</a>            
             </p>
           </div>
+
           <!-- Grid column -->
 
           <hr class="w-100 clearfix d-md-none" />
@@ -44,20 +43,16 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
-              Useful links
+              Liens utiles
             </h6>
             <p>
-              <a class="text-white">Your Account</a>
+              <a class="text-white" href="{{ path('app_account') }}">Compte</a>
+            </p>            
+            <p>
+              <a class="text-white" href="{{ path('app_contact') }}">Contact</a>
             </p>
             <p>
-              <a class="text-white">Become an Affiliate</a>
-            </p>
-            <p>
-              <a class="text-white">Shipping Rates</a>
-            </p>
-            <p>
-              <a class="text-white">Help</a>
-            </p>
+              <a class="text-white" href="{{ path('app_commentaire_liste') }}">Commentaires</a></p>
           </div>
 
           <!-- Grid column -->
@@ -65,13 +60,13 @@
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <h6 class="text-uppercase mb-4 font-weight-bold">Sites utiles</h6>
+            <p><a class="text-white" href="#">link Lafarge</a></p>
+            <p><a class="text-white" href="#">link placoplatre</a></p>
+            <p><a class="text-white" href="#">link tuto placo</a></p>  
           </div>
           <!-- Grid column -->
+        </div>
         </div>
         <!--Grid row-->
       </section>
@@ -100,10 +95,12 @@
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
+               href="#"
                ><i class="fab fa-facebook-f"></i
               ></a>
 
-            <!-- Twitter -->
+            <!-- Twitter 
+            
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
@@ -111,7 +108,7 @@
                ><i class="fab fa-twitter"></i
               ></a>
 
-            <!-- Google -->
+           
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
@@ -119,13 +116,14 @@
                ><i class="fab fa-google"></i
               ></a>
 
-            <!-- Instagram -->
+            
             <a
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
                ><i class="fab fa-instagram"></i
               ></a>
+              -->
           </div>
           <!-- Grid column -->
         </div>
