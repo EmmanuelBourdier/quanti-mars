@@ -146,4 +146,14 @@
   .sub-heading-1 {
     font-size: 30px;
   }
+
+  .footer-text {
+    text-align: center;
+    width: 100% !important;
+  }
+
+  .footer-title{
+    margin-left: 0rem !important;
+  }
+
 }
